@@ -2,7 +2,7 @@
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
-from sqlmodel import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 import json
 
 from backend.database.engine import get_session
@@ -13,7 +13,7 @@ router = APIRouter(prefix="/api/queue", tags=["queue"])
 
 @router.get("/pending")
 async def get_pending_files(
-    session: Session = Depends(get_session),
+    session: AsyncSession = Depends(get_session),
     limit: int = 50,
 ) -> list:
     """Get pending files awaiting user review/confirmation."""
@@ -41,7 +41,7 @@ async def get_pending_files(
 
 @router.get("/auto-moved")
 async def get_auto_moved_files(
-    session: Session = Depends(get_session),
+    session: AsyncSession = Depends(get_session),
     limit: int = 50,
 ) -> list:
     """Get files that were auto-moved."""
@@ -66,7 +66,7 @@ async def get_auto_moved_files(
 
 @router.get("/stats")
 async def get_queue_stats(
-    session: Session = Depends(get_session),
+    session: AsyncSession = Depends(get_session),
 ) -> dict:
     """Get statistics on file processing."""
     from sqlalchemy import func

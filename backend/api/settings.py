@@ -40,7 +40,7 @@ async def update_current_settings(
     organization_style: Optional[str] = None,
     confidence_auto: Optional[float] = None,
     confidence_suggest: Optional[float] = None,
-    session: Session = Depends(get_session),
+    session: AsyncSession = Depends(get_session),
 ) -> dict:
     """Update current active semester settings."""
     try:
@@ -76,7 +76,7 @@ async def create_semester(
     organization_style: str = "week",
     confidence_auto: float = 0.90,
     confidence_suggest: float = 0.70,
-    session: Session = Depends(get_session),
+    session: AsyncSession = Depends(get_session),
 ) -> dict:
     """Create new semester (deactivates previous ones)."""
     try:
@@ -106,7 +106,7 @@ async def create_semester(
 
 @router.get("/list-semesters")
 async def list_semesters(
-    session: Session = Depends(get_session),
+    session: AsyncSession = Depends(get_session),
 ) -> list:
     """List all configured semesters."""
     result = await session.execute(select(UserSettings).order_by(UserSettings.id.desc()))
