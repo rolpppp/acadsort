@@ -1,0 +1,256 @@
+{
+  "institution": "University of the Philippines Tacloban College",
+  "academic_year": "2026-2027",
+  "note": "Comprehensive course registry for UP Tacloban based on actual undergraduate programs. Students can customize this at semester setup.",
+  "departments": {
+    "College of Arts and Sciences": {
+      "Mathematics": {
+        "courses": [
+          {
+            "code": "MATH 17",
+            "name": "Algebra and Trigonometry",
+            "keywords": ["algebra", "trigonometry", "math17", "polynomial", "equations", "functions"]
+          },
+          {
+            "code": "MATH 53",
+            "name": "Elementary Analysis 1 (Calculus 1)",
+            "keywords": ["calculus", "derivatives", "limits", "math53", "differentiation", "continuity", "integral calculus"]
+          },
+          {
+            "code": "MATH 54",
+            "name": "Elementary Analysis 2 (Calculus 2)",
+            "keywords": ["integral", "integration", "calculus", "math54", "riemann", "area under curve", "volumes"]
+          },
+          {
+            "code": "MATH 55",
+            "name": "Elementary Analysis 3 (Multivariable Calculus)",
+            "keywords": ["multivariable", "partial derivative", "math55", "vector calculus", "gradient", "divergence"]
+          },
+          {
+            "code": "MATH 26",
+            "name": "Linear Algebra",
+            "keywords": ["linear algebra", "matrices", "determinants", "eigenvalues", "vector spaces"]
+          },
+          {
+            "code": "MATH 111",
+            "name": "Probability and Statistics",
+            "keywords": ["probability", "statistics", "distribution", "hypothesis testing", "math111"]
+          },
+          {
+            "code": "MATH 121",
+            "name": "Ordinary Differential Equations",
+            "keywords": ["differential equations", "ode", "math121", "first order", "second order"]
+          }
+        ]
+      },
+      "Physics": {
+        "courses": [
+          {
+            "code": "PHYS 51",
+            "name": "General Physics 1 (Mechanics)",
+            "keywords": ["physics", "mechanics", "kinematics", "phys51", "newton", "motion", "force", "energy"]
+          },
+          {
+            "code": "PHYS 52",
+            "name": "General Physics 2 (Electricity & Magnetism)",
+            "keywords": ["electromagnetism", "optics", "waves", "phys52", "electric field", "magnetism", "light"]
+          },
+          {
+            "code": "PHYS 71",
+            "name": "Physics Laboratory 1",
+            "keywords": ["physics lab", "experiment", "measurement", "phys71", "apparatus"]
+          },
+          {
+            "code": "PHYS 72",
+            "name": "Physics Laboratory 2",
+            "keywords": ["physics lab", "experiment", "phys72", "measurement"]
+          }
+        ]
+      },
+      "Chemistry": {
+        "courses": [
+          {
+            "code": "CHEM 11",
+            "name": "General Chemistry 1",
+            "keywords": ["chemistry", "atoms", "molecules", "chem11", "periodic table", "bonding", "stoichiometry"]
+          },
+          {
+            "code": "CHEM 12",
+            "name": "General Chemistry 2",
+            "keywords": ["chemistry", "thermodynamics", "kinetics", "chem12", "equilibrium"]
+          },
+          {
+            "code": "CHEM 31",
+            "name": "Organic Chemistry 1",
+            "keywords": ["organic chemistry", "chem31", "reactions", "mechanisms", "hydrocarbons"]
+          },
+          {
+            "code": "CHEM 32",
+            "name": "Organic Chemistry 2",
+            "keywords": ["organic chemistry", "chem32", "synthesis", "aromatic compounds"]
+          }
+        ]
+      },
+      "Biology": {
+        "courses": [
+          {
+            "code": "BIO 11",
+            "name": "General Biology 1",
+            "keywords": ["biology", "cells", "genetics", "bio11", "evolution", "heredity"]
+          },
+          {
+            "code": "BIO 12",
+            "name": "General Biology 2",
+            "keywords": ["biology", "ecology", "bio12", "organisms", "environment"]
+          },
+          {
+            "code": "BIO 41",
+            "name": "Human Biology",
+            "keywords": ["human biology", "anatomy", "physiology", "bio41", "systems"]
+          }
+        ]
+      },
+      "Filipino": {
+        "courses": [
+          {
+            "code": "FIL 1",
+            "name": "Filipino 1 (Komunikasyon)",
+            "keywords": ["filipino", "fil1", "wika", "komunikasyon", "pag-uusap", "pagbabasa"]
+          },
+          {
+            "code": "FIL 2",
+            "name": "Filipino 2 (Pagsulat)",
+            "keywords": ["pagsulat", "essays", "fil2", "komposisyon", "academic writing"]
+          },
+          {
+            "code": "FIL 40",
+            "name": "Filipino sa Iba't Ibang Disiplina",
+            "keywords": ["fil40", "akademikong pagsulat", "talumpati", "larangan"]
+          }
+        ]
+      },
+      "English": {
+        "courses": [
+          {
+            "code": "ENG 1",
+            "name": "College English (Composition)",
+            "keywords": ["english", "eng1", "essay", "composition", "writing", "grammar"]
+          },
+          {
+            "code": "ENG 2",
+            "name": "College English (Literature)",
+            "keywords": ["english", "eng2", "literature", "poetry", "drama", "fiction"]
+          },
+          {
+            "code": "ENG 71",
+            "name": "English for Academic Purposes",
+            "keywords": ["english", "academic english", "eng71", "research", "presentation"]
+          }
+        ]
+      },
+      "History": {
+        "courses": [
+          {
+            "code": "KAS 1",
+            "name": "Kasaysayan ng Pilipinas 1",
+            "keywords": ["kasaysayan", "pilipinas", "kas1", "philippine history", "pre-colonial"]
+          },
+          {
+            "code": "KAS 2",
+            "name": "Kasaysayan ng Pilipinas 2",
+            "keywords": ["kasaysayan", "history", "kas2", "spanish period", "american period"]
+          },
+          {
+            "code": "KAS 3",
+            "name": "Kasaysayan ng Pilipinas 3",
+            "keywords": ["kasaysayan", "kas3", "independence", "martial law", "contemporary"]
+          }
+        ]
+      },
+      "Philosophy & Psychology": {
+        "courses": [
+          {
+            "code": "PHILO 1",
+            "name": "Introduction to Philosophy",
+            "keywords": ["philosophy", "philo1", "reasoning", "logic", "epistemology"]
+          },
+          {
+            "code": "PSYCH 1",
+            "name": "General Psychology",
+            "keywords": ["psychology", "psych1", "behavior", "cognition", "development"]
+          }
+        ]
+      }
+    },
+    "College of Engineering": {
+      "Computer Science": {
+        "courses": [
+          {"code": "CMSC 11", "name": "Introduction to Computer Science", "keywords": ["cmsc11", "algorithm", "programming", "pseudocode", "flowchart"]},
+          {"code": "CMSC 21", "name": "Fundamentals of Programming", "keywords": ["cmsc21", "python", "c programming", "variables", "loops", "functions"]},
+          {"code": "CMSC 56", "name": "Discrete Structures 1", "keywords": ["cmsc56", "logic", "sets", "relations", "proof", "boolean"]},
+          {"code": "CMSC 57", "name": "Discrete Structures 2", "keywords": ["cmsc57", "graph theory", "combinatorics", "probability"]},
+          {"code": "CMSC 127", "name": "File Processing and Database Systems", "keywords": ["cmsc127", "database", "sql", "file processing", "normalization", "erd"]},
+          {"code": "CMSC 128", "name": "Introduction to Software Engineering", "keywords": ["cmsc128", "software engineering", "sdlc", "agile", "requirements", "uml"]},
+          {"code": "CMSC 131", "name": "Data Structures", "keywords": ["cmsc131", "data structures", "linked list", "stack", "queue", "tree", "sorting"]},
+          {"code": "CMSC 132", "name": "Design and Analysis of Algorithms", "keywords": ["cmsc132", "algorithm", "complexity", "big-o", "dynamic programming", "greedy"]},
+          {"code": "CMSC 141", "name": "Introduction to Artificial Intelligence", "keywords": ["cmsc141", "artificial intelligence", "machine learning", "neural networks"]},
+          {"code": "CMSC 142", "name": "Natural Language Processing", "keywords": ["cmsc142", "nlp", "language processing", "text analysis"]},
+          {"code": "CMSC 161", "name": "Computer Networks", "keywords": ["cmsc161", "networking", "protocols", "internet", "tcp/ip"]},
+          {"code": "CMSC 162", "name": "Operating Systems", "keywords": ["cmsc162", "os", "processes", "threads", "memory management"]}
+        ]
+      },
+      "Civil Engineering": {
+        "courses": [
+          {"code": "CE 21", "name": "Engineering Mechanics (Statics)", "keywords": ["ce21", "mechanics", "statics", "forces", "equilibrium"]},
+          {"code": "CE 22", "name": "Engineering Mechanics (Dynamics)", "keywords": ["ce22", "dynamics", "motion", "acceleration"]},
+          {"code": "CE 31", "name": "Structural Analysis 1", "keywords": ["ce31", "structural", "beams", "analysis", "reactions"]},
+          {"code": "CE 51", "name": "Surveying 1", "keywords": ["ce51", "surveying", "measurement", "land"]}
+        ]
+      },
+      "Electrical Engineering": {
+        "courses": [
+          {"code": "EE 11", "name": "DC Circuits", "keywords": ["ee11", "circuits", "voltage", "current", "resistance", "ohm's law"]},
+          {"code": "EE 12", "name": "AC Circuits", "keywords": ["ee12", "circuits", "alternating", "impedance", "phasor"]},
+          {"code": "EE 31", "name": "Digital Systems", "keywords": ["ee31", "digital", "logic", "binary", "gates"]}
+        ]
+      },
+      "Mechanical Engineering": {
+        "courses": [
+          {"code": "ME 11", "name": "Engineering Materials", "keywords": ["me11", "materials", "properties", "metallurgy"]},
+          {"code": "ME 21", "name": "Thermodynamics 1", "keywords": ["me21", "thermodynamics", "heat", "energy", "work"]},
+          {"code": "ME 31", "name": "Machine Design", "keywords": ["me31", "design", "machines", "stress", "fatigue"]}
+        ]
+      }
+    },
+    "College of Teacher Education": {
+      "Education": {
+        "courses": [
+          {"code": "ED 10", "name": "Introduction to Education", "keywords": ["ed10", "education", "teaching", "learning", "pedagogy"]},
+          {"code": "ED 101", "name": "Child Development and Learning", "keywords": ["ed101", "child development", "psychology", "growth"]},
+          {"code": "ED 102", "name": "Curriculum Development", "keywords": ["ed102", "curriculum", "design", "objectives"]},
+          {"code": "ED 103", "name": "Teaching Methods and Strategies", "keywords": ["ed103", "teaching methods", "strategies", "classroom"]}
+        ]
+      }
+    },
+    "School of Nursing": {
+      "Nursing": {
+        "courses": [
+          {"code": "NUR 11", "name": "Fundamentals of Nursing", "keywords": ["nur11", "nursing", "fundamentals", "patient care", "hygiene"]},
+          {"code": "NUR 21", "name": "Medical-Surgical Nursing 1", "keywords": ["nur21", "medical", "surgical", "nursing", "diseases"]},
+          {"code": "NUR 31", "name": "Maternal and Child Health Nursing", "keywords": ["nur31", "maternal", "child health", "pregnancy", "pediatrics"]}
+        ]
+      }
+    },
+    "Interdisciplinary": {
+      "General Education": {
+        "courses": [
+          {"code": "PI 100", "name": "The Life and Works of Rizal", "keywords": ["pi100", "rizal", "jose rizal", "noli me tangere", "el filibusterismo"]},
+          {"code": "STS 1", "name": "Science, Technology, and Society", "keywords": ["sts1", "science", "technology", "society", "ethics", "innovation"]},
+          {"code": "COMM 3", "name": "Writing in the Discipline", "keywords": ["comm3", "writing", "academic writing", "discipline", "research paper"]},
+          {"code": "PHYS_ED 1", "name": "Physical Education and Health 1", "keywords": ["pe", "physical education", "health", "fitness", "wellness"]},
+          {"code": "ARTS 1", "name": "Introduction to the Arts", "keywords": ["arts", "art history", "painting", "sculpture", "music"]}
+        ]
+      }
+    }
+  }
+}

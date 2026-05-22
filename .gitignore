@@ -1,0 +1,71 @@
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Environment ───────────────────────────────────────────────
+backend/.env
+!backend/.env.example
+*.local
+
+# ── Models (too large for git — downloaded at first run) ──────
+models/
+!models/.gitkeep
+
+# ── Database ──────────────────────────────────────────────────
+data/*.db
+data/*.db-wal
+!data/.gitkeep
+!data/up_tacloban_courses.json
+
+# ── Frontend (Tauri) ───────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/src-tauri/target/
+
+# ── OS-specific ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+data/*.db-shm
+!data/course_registry/
+
+# ── Node / Frontend ───────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+.npm
+
+# ── Tauri build artifacts ─────────────────────────────────────
+frontend/src-tauri/target/
+frontend/src-tauri/WixTools/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.iml
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+logs/

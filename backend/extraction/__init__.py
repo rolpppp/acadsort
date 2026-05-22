@@ -1,0 +1,3 @@
+"""
+File extraction pipeline
+"""

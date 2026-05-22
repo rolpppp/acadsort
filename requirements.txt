@@ -1,0 +1,38 @@
+# ─── Web / API ────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# ─── Database ─────────────────────────────────────────────────
+sqlmodel==0.0.22
+aiosqlite==0.20.0
+
+# ─── File Watching ────────────────────────────────────────────
+watchdog==6.0.0
+
+# ─── File Extraction ─────────────────────────────────────────
+PyMuPDF==1.24.14
+python-docx==1.1.2
+python-pptx==1.0.2
+openpyxl==3.1.5
+
+# ─── AI / Embeddings ─────────────────────────────────────────
+sentence-transformers==3.3.1
+torch==2.5.1               # CPU-only; override with torch+cu121 if GPU available
+numpy==1.26.4
+
+# ─── LLM (Ollama HTTP client) ────────────────────────────────
+ollama==0.4.4
+httpx==0.28.1
+
+# ─── Utilities ───────────────────────────────────────────────
+python-multipart==0.0.18   # FastAPI file uploads
+python-dateutil==2.9.0
+structlog==24.4.0           # Structured logging
+tenacity==9.0.0             # Retry logic for Ollama calls
+
+# ─── Dev / Testing ───────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.24.0
+httpx==0.28.1               # Also used as test client for FastAPI
