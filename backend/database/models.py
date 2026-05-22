@@ -77,6 +77,7 @@ class FileRecord(SQLModel, table=True):
     id: Optional[int]           = Field(default=None, primary_key=True)
     original_name: str          = Field(index=True)
     new_name: Optional[str]     = Field(default=None)
+    semester_id: Optional[int]  = Field(default=None, foreign_key="user_settings.id")
     detected_course: Optional[str] = Field(default=None, index=True)
     material_type: str          = Field(default=MaterialType.OTHER)
     week_number: Optional[int]  = Field(default=None)

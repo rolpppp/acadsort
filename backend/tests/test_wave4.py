@@ -172,11 +172,12 @@ async def test_foreign_key_relationships():
         await session.commit()
         course_id = course.id
     
-    # Create file record with foreign key
+    # Create file record with foreign key (unique name avoids stale rows in shared DB)
+    test_filename = "fk_test_relationship.pdf"
     async with AsyncSessionLocal() as session:
         file_record = FileRecord(
-            original_name="test.pdf",
-            detected_course=f"FK TEST",
+            original_name=test_filename,
+            detected_course="FK TEST",
             material_type="LECTURE",
             week_number=1,
             confidence=0.95,
@@ -185,15 +186,16 @@ async def test_foreign_key_relationships():
         )
         session.add(file_record)
         await session.commit()
+        file_id = file_record.id
     
     # Verify relationships
     async with AsyncSessionLocal() as session:
         result = await session.execute(
-            select(FileRecord).where(FileRecord.original_name == "test.pdf")
+            select(FileRecord).where(FileRecord.id == file_id)
         )
-        file_rec = result.scalars().first()
-        assert file_rec is not None
+        file_rec = result.scalars().one()
         assert file_rec.semester_id == settings_id
+        assert file_rec.detected_course == "FK TEST"
     
     print("✅ Passed: Foreign key relationships")
 

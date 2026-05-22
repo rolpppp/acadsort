@@ -2,15 +2,34 @@
 
 import asyncio
 import logging
+import sys
 from pathlib import Path
-from typing import Callable, Optional
+from typing import Callable, Optional, Type
 
-from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler, FileCreatedEvent, FileModifiedEvent
 
 from backend.config import settings
 
 logger = logging.getLogger(__name__)
+
+
+def _observer_classes() -> list[Type]:
+    """Observer backends in preference order (FSEvents is unreliable in sandboxes/CI)."""
+    classes: list[Type] = []
+    if sys.platform == "darwin":
+        try:
+            from watchdog.observers.kqueue import KqueueObserver
+            classes.append(KqueueObserver)
+        except ImportError:
+            pass
+    try:
+        from watchdog.observers import Observer
+        classes.append(Observer)
+    except ImportError:
+        pass
+    from watchdog.observers.polling import PollingObserver
+    classes.append(PollingObserver)
+    return classes
 
 
 class FileEventHandler(FileSystemEventHandler):
@@ -126,14 +145,28 @@ class DownloadMonitor:
             # Create event handler
             self.event_handler = FileEventHandler(callback, self.debounce_seconds)
             
-            # Start watchdog observer
-            self.observer = Observer()
-            self.observer.schedule(
-                self.event_handler,
-                str(self.watch_path),
-                recursive=False,  # Don't monitor subdirectories
-            )
-            self.observer.start()
+            # Start watchdog observer (Kqueue on macOS; Polling as last resort)
+            last_error: Exception | None = None
+            for observer_cls in _observer_classes():
+                observer = observer_cls()
+                try:
+                    observer.schedule(
+                        self.event_handler,
+                        str(self.watch_path),
+                        recursive=False,
+                    )
+                    observer.start()
+                    self.observer = observer
+                    break
+                except Exception as e:
+                    last_error = e
+                    try:
+                        observer.stop()
+                    except Exception:
+                        pass
+            else:
+                raise last_error or RuntimeError("No filesystem observer available")
+
             self.is_running = True
             
             # Start debounce processor in background
