@@ -50,6 +50,9 @@ class Settings(BaseSettings):
     watcher_debounce_seconds: float = 2.0   # Wait after file event before processing
     undo_grace_period_seconds: int = 30     # Window to undo an auto-move
 
+    # ── File organization ──────────────────────────────────────
+    organization_style: str = "week"        # "week" or "type" for folder structure
+    
     # ── Downloads folder ───────────────────────────────────────
     downloads_path: Path = Path.home() / "Downloads"
 
