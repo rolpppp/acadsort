@@ -1,0 +1,20 @@
+[package]
+name = "acadsort"
+version = "0.1.0"
+description = "AcadSort - Academic File Organizer for UP Tacloban Students"
+authors = ["AcadSort Team"]
+license = "MIT"
+repository = "https://github.com/yourusername/acadsort"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.5", features = ["shell-open"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

@@ -83,9 +83,12 @@ cp backend/.env.example backend/.env
 Start the Python backend (terminal 1):
 ```bash
 source .venv/bin/activate
-cd backend
-uvicorn main:app --host 127.0.0.1 --port 8765 --reload
+uvicorn backend.main:app --host 127.0.0.1 --port 8765 --reload
 ```
+
+Or use the helper script: `bash scripts/run_backend.sh`
+
+(Running from `backend/` also works: `cd backend && uvicorn main:app --host 127.0.0.1 --port 8765 --reload`)
 
 Start the Tauri dev server (terminal 2):
 ```bash

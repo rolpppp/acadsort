@@ -1,0 +1,58 @@
+# AcadSort session greetings — one line is chosen at random per browser session.
+# Format: [category] then one greeting per line (category matches local time).
+
+[midnight]
+Still up, Isko?
+Burning the midnight oil?
+The library never closes — neither do you, apparently.
+Midnight scholar mode: activated.
+
+[late_night]
+Working late again?
+The quiet hours are good for focus.
+Still going? Respect.
+Night shift on the readings, I see.
+
+[early_morning]
+You're up before the sun, Isko.
+Early morning, clear desk energy.
+Coffee soon. Files first?
+The campus is still asleep. You're not.
+
+[morning]
+Good morning, Isko.
+Morning. Ready when you are.
+Fresh day, fresh folders.
+Rise and organize.
+
+[late_morning]
+Almost lunch — still on a roll.
+Morning's going well, from the looks of it.
+Keeping pace before noon hits.
+
+[lunch]
+Lunch break, or power-through?
+Midday check-in. Everything holding up?
+Hope you're eating something between PDFs.
+
+[afternoon]
+Good afternoon, Isko.
+Afternoon grind — you've got this.
+Post-lunch productivity arc begins now.
+Still in the zone this afternoon.
+
+[late_afternoon]
+Golden hour for getting things done.
+Wrapping the afternoon strong.
+Almost done with the day — one more push.
+
+[evening]
+Good evening, Isko.
+Evening session. Let's tidy things up.
+Winding down, but still sharp.
+The day's files, sorted before rest.
+
+[night]
+Good evening — or is it still study time?
+Night mode: calm and organized.
+Settling in for the evening batch.

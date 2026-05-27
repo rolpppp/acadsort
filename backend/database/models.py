@@ -111,3 +111,24 @@ class EmbeddingExemplar(SQLModel, table=True):
     embedding_data: bytes                                    # Serialized numpy array
     source: str                 = Field(default=ExemplarSource.SEED)  # seed, correction, syllabus
     created_at: datetime        = Field(default_factory=datetime.utcnow)
+
+
+class WatchFolder(SQLModel, table=True):
+    __tablename__ = "watch_folders"
+
+    id: Optional[int]           = Field(default=None, primary_key=True)
+    semester_id: int            = Field(foreign_key="user_settings.id", index=True)
+    path: str                   = Field(index=True)         # e.g. "~/Downloads"
+    enabled: bool               = Field(default=True)
+    created_at: datetime        = Field(default_factory=datetime.utcnow)
+    updated_at: datetime        = Field(default_factory=datetime.utcnow)
+
+
+class Session(SQLModel, table=True):
+    __tablename__ = "sessions"
+
+    id: str                     = Field(default="", primary_key=True)  # UUID string
+    created_at: datetime        = Field(default_factory=datetime.utcnow, index=True)
+    last_activity: datetime     = Field(default_factory=datetime.utcnow)
+    semester_id: Optional[int]  = Field(default=None, foreign_key="user_settings.id")
+    metadata_json: str          = Field(default="{}")       # JSON-encoded session metadata

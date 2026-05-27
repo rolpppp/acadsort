@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased min-h-screen;
+  }
+
+  ::selection {
+    @apply bg-primary-container text-on-primary-container;
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .label-caps {
+    @apply text-label-caps uppercase tracking-wider font-semibold;
+  }
+
+  .card-surface {
+    @apply bg-surface-container-low border border-outline-variant rounded-card;
+  }
+
+  .card-surface-interactive {
+    @apply card-surface transition-colors hover:border-outline;
+  }
+
+  .input-field {
+    @apply w-full bg-surface border border-outline-variant rounded-btn py-2.5 px-4
+      text-body-md text-on-surface placeholder:text-outline
+      focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-on-primary font-semibold text-label-caps px-6 py-2.5 rounded-btn
+      hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-border-interaction text-on-surface font-semibold text-label-caps
+      px-4 py-2.5 rounded-btn hover:bg-surface-variant transition-colors flex items-center gap-2;
+  }
+
+  .btn-ghost {
+    @apply text-on-surface-variant hover:text-on-surface hover:bg-surface-variant
+      font-semibold text-label-caps px-4 py-2.5 rounded-btn transition-colors;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-btn text-on-surface-variant text-body-sm
+      hover:bg-surface-variant hover:text-on-surface transition-colors;
+  }
+
+  .nav-item-active {
+    @apply nav-item text-primary font-bold border-r-2 border-primary bg-surface-variant/40;
+  }
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  @apply w-full h-1.5 rounded-full bg-surface-container-highest outline-none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  @apply w-4 h-4 rounded-full bg-primary cursor-pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-4 h-4 rounded-full bg-primary cursor-pointer border-0;
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/vite-env.d.ts",
+    "src/components/**/*",
+    "src/pages/**/*",
+    "src/hooks/**/*",
+    "src/types/**/*",
+    "src/lib/**/*",
+    "src/data/**/*"
+  ],
+  "exclude": ["src/__tests__", "e2e"]
+}

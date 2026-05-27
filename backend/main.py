@@ -1,8 +1,21 @@
 """
 main.py — AcadSort FastAPI backend entry point
-Run with: cd backend && uvicorn main:app --host 127.0.0.1 --port 8765 --reload
+
+From project root:
+  source .venv/bin/activate
+  uvicorn backend.main:app --host 127.0.0.1 --port 8765 --reload
+
+From backend/ (also works — project root is added to sys.path below):
+  cd backend && uvicorn main:app --host 127.0.0.1 --port 8765 --reload
 """
 import sys
+from pathlib import Path
+
+# Imports use `backend.*`; ensure repo root is on PYTHONPATH when cwd is backend/
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
 import structlog
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
@@ -94,12 +107,16 @@ from backend.api.files import router as files_router
 from backend.api.courses import router as courses_router
 from backend.api.settings import router as settings_router
 from backend.api.queue import router as queue_router
+from backend.api.watch_folders import router as watch_folders_router
+from backend.api.session import router as session_router
 
 app.include_router(health_router)
 app.include_router(files_router)
 app.include_router(courses_router)
 app.include_router(settings_router)
 app.include_router(queue_router)
+app.include_router(watch_folders_router)
+app.include_router(session_router)
 
 
 if __name__ == "__main__":
